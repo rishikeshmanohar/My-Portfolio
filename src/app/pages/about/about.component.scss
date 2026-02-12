@@ -1,0 +1,185 @@
+.about {
+  display: grid;
+  gap: 22px;
+  padding: 10px 0 40px;
+}
+
+h1 {
+  margin: 10px 0 4px;
+  text-align: center;
+  font-size: 44px;
+}
+
+/* Top card */
+.hero {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  padding: 22px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: rgba(17, 24, 39, 0.55);
+  backdrop-filter: blur(10px);
+}
+
+.summary {
+  margin: 0;
+  text-align: center;
+  color: rgba(229,231,235,0.9);
+  line-height: 1.75;
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Stats tiles */
+.stats {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.stat {
+  padding: 14px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.03);
+  text-align: center;
+}
+
+.num {
+  font-size: 28px;
+  font-weight: 900;
+  color: rgba(96,165,250,0.95);
+}
+
+.lbl {
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+/* Columns */
+.cols {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 22px;
+  align-items: start;
+}
+
+/* Panels */
+.panel {
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: rgba(17, 24, 39, 0.45);
+  backdrop-filter: blur(10px);
+}
+
+.panel-title {
+  font-size: 18px;
+  font-weight: 900;
+  color: rgba(96,165,250,0.95);
+}
+
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 12px 0 14px;
+}
+
+/* Education cards */
+.edu {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.03);
+  margin-bottom: 12px;
+}
+
+.edu-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: rgba(96,165,250,.14);
+  border: 1px solid rgba(96,165,250,.35);
+}
+
+.edu-title {
+  font-weight: 900;
+}
+
+.edu-sub {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Experience cards */
+.job {
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.03);
+  margin-bottom: 12px;
+}
+
+.role {
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.org {
+  margin-top: 3px;
+  color: rgba(229,231,235,0.9);
+}
+
+.meta {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.bullets {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .cols { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  h1 { font-size: 36px; }
+}
+
+
+.profile-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.profile-img {
+  width: 190px;          /* small size */
+  height: 190px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgba(96,165,250,.4);
+  box-shadow: 0 0 25px rgba(96,165,250,.25);
+}
+
+.profile-img:hover {
+  transform: scale(1.03);
+}
+

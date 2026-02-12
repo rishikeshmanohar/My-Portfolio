@@ -1,0 +1,28 @@
+<div class="card">
+  <h2>Projects</h2>
+  <p class="muted">Work that reflects my skills and passion for continuous learning.</p>
+</div>
+
+<div class="grid two" style="margin-top: 16px;">
+  <div class="card" *ngFor="let p of projects">
+    <div class="row">
+      <h3>{{ p.title }}</h3>
+      <span class="time">{{ p.timeframe }}</span>
+    </div>
+
+    <p class="muted">{{ p.description }}</p>
+
+    <ul class="muted">
+      <li *ngFor="let b of p.bullets">{{ b }}</li>
+    </ul>
+
+    <div class="tags">
+      <span class="tag" *ngFor="let t of p.tags">{{ t }}</span>
+    </div>
+
+    <div class="links">
+      <a class="btn" *ngIf="p.github" [href]="p.github" target="_blank" rel="noreferrer">GitHub</a>
+      <a class="btn primary" *ngIf="p.live" [href]="p.live" target="_blank" rel="noreferrer">Live</a>
+    </div>
+  </div>
+</div>

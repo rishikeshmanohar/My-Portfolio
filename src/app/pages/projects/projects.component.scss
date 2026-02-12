@@ -1,0 +1,14 @@
+.muted { color: var(--muted); }
+.row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.time { color: var(--muted); font-size: 12px; }
+
+.tags { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0; }
+.tag {
+  font-size: 12px;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.03);
+}
+.links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }

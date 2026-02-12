@@ -1,0 +1,15 @@
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 18px 0;
+  background: rgba(11, 15, 23, 0.55);
+}
+
+.inner {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+}
+
+.muted { color: var(--muted); }

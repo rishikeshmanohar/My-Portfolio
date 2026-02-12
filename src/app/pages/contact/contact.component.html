@@ -1,0 +1,84 @@
+<section class="contact">
+  <div class="top">
+    <h2>Contact</h2>
+    <p class="muted">
+      Want to collaborate, discuss opportunities, or just talk tech? Send me a message.
+    </p>
+  </div>
+
+  <div class="grid">
+    <!-- LEFT: Let's Connect -->
+    <div class="left">
+      <h3 class="section-title">Let's Connect</h3>
+
+      <a class="connect-card" href="mailto:rmanoha8&#64;asu.edu">
+        <div class="icon-circle">✉️</div>
+        <div class="text">
+          <div class="label">Email</div>
+          <div class="value">rmanoha8&#64;asu.edu</div>
+          <div class="hint">I'll get back to you within 24 hours</div>
+        </div>
+      </a>
+
+      <a class="connect-card" href="https://www.linkedin.com/in/rishikeshmanohar/" target="_blank" rel="noreferrer">
+        <div class="icon-circle">in</div>
+        <div class="text">
+          <div class="label">LinkedIn</div>
+          <div class="value">linkedin.com/in/rishikeshmanohar</div>
+          <div class="hint">Connect with me professionally</div>
+        </div>
+      </a>
+
+      <a class="connect-card" href="https://github.com/rishikeshmanohar" target="_blank" rel="noreferrer">
+        <div class="icon-circle">GH</div>
+        <div class="text">
+          <div class="label">GitHub</div>
+          <div class="value">github.com/rishikeshmanohar</div>
+          <div class="hint">Check out my latest projects</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- RIGHT: Send Me a Message -->
+    <div class="right">
+      <h3 class="section-title">Send Me a Message</h3>
+
+      <!-- No backend needed: this opens user's mail app -->
+      <form class="form" (ngSubmit)="sendEmail()">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" [(ngModel)]="form.name" required />
+        </label>
+
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" [(ngModel)]="form.email" required />
+        </label>
+
+        <label>
+          <span>Subject</span>
+          <input type="text" name="subject" [(ngModel)]="form.subject" required />
+        </label>
+
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="5" [(ngModel)]="form.message" required></textarea>
+        </label>
+
+        <button class="btn primary wide" type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bottom Availability -->
+  <div class="availability card">
+    <div class="dot"></div>
+    <div class="avail-text">
+      <div class="avail-title">Current Availability</div>
+      <div class="muted">Available for new opportunities</div>
+      <div class="muted small">
+        I’m currently open to full-time roles and meaningful collaborations.
+      </div>
+    </div>
+  </div>
+</section>
