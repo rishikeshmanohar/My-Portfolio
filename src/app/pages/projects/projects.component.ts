@@ -21,7 +21,7 @@ type Project = {
 export class ProjectsComponent {
   projects: Project[] = [
     {
-      title: 'Developer WorkFlow Dicipline',
+      title: 'Developer WorkFlow Discipline',
       timeframe: 'Jan 2023 – Apr 2023',
       description: 'FastAPI system to categorize developers by Git activity and reduce manager investigation time.',
       bullets: [
@@ -30,7 +30,7 @@ export class ProjectsComponent {
         'Achieved ~96% unit test coverage using Pytest.'
       ],
       tags: ['Python', 'FastAPI', 'Pytest', 'Pydantic'],
-      github: 'https://github.com/your-username/your-repo'
+      github: 'https://github.com/rishikeshmanohar/Developer-WorkFlow-Discipline'
     },
     {
       title: 'Online Pharmacy System',
@@ -41,7 +41,7 @@ export class ProjectsComponent {
         'Integrated Google Maps for delivery routing and improved UX for delivery flow.'
       ],
       tags: ['Full-stack', 'APIs', 'Maps Integration'],
-      github: 'https://github.com/your-username/your-repo2'
+      github: 'https://github.com/rishikeshmanohar/medicare-plus-ecommerce'
     },
     {
       title: 'Personal Portfolio',
@@ -52,7 +52,7 @@ export class ProjectsComponent {
         'Hosted on GitHub Pages with contact form integration.'
       ],
       tags: ['Angular', 'TypeScript', 'UI/UX'],
-      live: 'https://your-site.com'
+      live: 'https://rishikeshmanohar.github.io/My-Portfolio/'
     }
   ];
 }
