@@ -44,29 +44,15 @@
       <h3 class="section-title">Send Me a Message</h3>
 
       <!-- No backend needed: this opens user's mail app -->
-      <form class="form" (ngSubmit)="sendEmail()">
-        <label>
-          <span>Name</span>
-          <input type="text" name="name" [(ngModel)]="form.name" required />
-        </label>
+      <form (ngSubmit)="send()">
+  <input name="name" [(ngModel)]="name" placeholder="Name" required />
+  <input name="email" [(ngModel)]="email" placeholder="Email" required />
+  <input name="subject" [(ngModel)]="subject" placeholder="Subject" />
+  <textarea name="message" [(ngModel)]="message" placeholder="Message" required></textarea>
 
-        <label>
-          <span>Email</span>
-          <input type="email" name="email" [(ngModel)]="form.email" required />
-        </label>
+  <button class="btn primary" type="submit">Send Message</button>
+</form>
 
-        <label>
-          <span>Subject</span>
-          <input type="text" name="subject" [(ngModel)]="form.subject" required />
-        </label>
-
-        <label>
-          <span>Message</span>
-          <textarea name="message" rows="5" [(ngModel)]="form.message" required></textarea>
-        </label>
-
-        <button class="btn primary wide" type="submit">Send Message</button>
-      </form>
     </div>
   </div>
 

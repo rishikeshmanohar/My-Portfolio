@@ -9,20 +9,25 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-  form = {
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  };
+  name = '';
+  email = '';
+  subject = '';
+  message = '';
 
-  sendEmail() {
+  send() {
     const to = 'rmanoha8@asu.edu';
-    const subject = encodeURIComponent(this.form.subject || 'Portfolio Message');
-    const body = encodeURIComponent(
-      `Name: ${this.form.name}\nEmail: ${this.form.email}\n\n${this.form.message}`
-    );
 
-    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    const body =
+`Name: ${this.name}
+Email: ${this.email}
+
+${this.message}`;
+
+    const url =
+      `mailto:${to}` +
+      `?subject=${encodeURIComponent(this.subject || 'Portfolio Contact')}` +
+      `&body=${encodeURIComponent(body)}`;
+
+    window.location.href = url;
   }
 }
