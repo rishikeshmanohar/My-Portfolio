@@ -1,7 +1,11 @@
+// .contact {
+//   display: grid;
+//   gap: 18px;
+// }
 .contact {
-  display: grid;
-  gap: 18px;
+  min-height: calc(100vh - 185px);
 }
+
 
 .top h2 {
   margin: 0 0 6px;
@@ -142,4 +146,37 @@ input:focus, textarea:focus {
 
 @media (max-width: 900px) {
   .grid { grid-template-columns: 1fr; }
+}
+
+.toast {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  z-index: 9999;
+  background: #111;
+  color: #fff;
+  max-width: 360px;
+}
+
+.toast.success {
+  background: #0f5132;
+}
+
+.toast.error {
+  background: #842029;
+}
+
+.toast-close {
+  border: none;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
 }

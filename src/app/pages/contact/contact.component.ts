@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
   name = '';
@@ -14,20 +15,47 @@ export class ContactComponent {
   subject = '';
   message = '';
 
-  send() {
-    const to = 'rmanoha8@asu.edu';
+  status: 'idle' | 'sending' | 'success' | 'error' = 'idle';
 
-    const body =
-`Name: ${this.name}
-Email: ${this.email}
+  private endpoint = 'https://formspree.io/f/xojnewad';
 
-${this.message}`;
+  async send(form: NgForm) {
+    if (this.status === 'sending') return;
 
-    const url =
-      `mailto:${to}` +
-      `?subject=${encodeURIComponent(this.subject || 'Portfolio Contact')}` +
-      `&body=${encodeURIComponent(body)}`;
+    this.status = 'sending';
 
-    window.location.href = url;
+    try {
+      const res = await fetch(this.endpoint, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: this.name,
+          email: this.email,
+          subject: this.subject,
+          message: this.message,
+        }),
+      });
+
+      if (res.ok) {
+        this.status = 'success';
+        form.resetForm();
+
+        // auto-hide popup after 3 seconds
+        setTimeout(() => {
+          this.status = 'idle';
+        }, 3000);
+      } else {
+        this.status = 'error';
+      }
+    } catch {
+      this.status = 'error';
+    }
+  }
+
+  closeToast() {
+    this.status = 'idle';
   }
 }
