@@ -1,59 +1,56 @@
-# MyPortfolio
+# 🌌 Rishikesh Manohar — Developer Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.2.
+A modern, animated, dark-themed personal portfolio built with **Angular 17 (Standalone Components)**.
 
-## Development server
+This portfolio showcases my experience, projects, technical skills, and professional background with a clean UI and animated particle background.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## 🚀 Live Demo
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## 👨‍💻 About Me
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Software Engineer with 4+ years of experience delivering scalable, secure, cloud-native applications across healthcare, finance, and retail domains.
 
-```bash
-ng generate --help
-```
+Specialized in:
+- Java / Spring Boot
+- C# / .NET
+- Angular
+- Microservices Architecture
+- REST APIs
+- Kafka (Event-driven systems)
+- AWS / Azure
+- Docker & Kubernetes
+- CI/CD Automation
 
-## Building
+---
 
-To build the project run:
+## ✨ Features
 
-```bash
-ng build
-```
+- 🌌 Animated particle background (custom Canvas implementation)
+- 🎨 Modern dark UI with glassmorphism styling
+- 👤 Profile image integration
+- 📊 Stats section (Years Experience, Projects, Cloud, DevOps)
+- 🎓 Education & Experience panels
+- 📂 Projects section
+- 📞 Contact section with mail integration
+- 📄 Resume download button
+- 📱 Fully responsive design
+- ⚡ Angular Standalone Architecture (No AppModule)
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## 🛠️ Tech Stack
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- Angular 17 (Standalone Components)
+- TypeScript
+- SCSS
+- HTML5
+- Canvas API (Custom animation)
+- Git & GitHub
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
