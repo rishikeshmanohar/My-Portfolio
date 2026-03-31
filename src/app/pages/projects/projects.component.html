@@ -4,7 +4,7 @@
 </div>
 
 <div class="grid two" style="margin-top: 16px;">
-  <div class="card" *ngFor="let p of projects">
+  <div class="card" *ngFor="let p of projects; trackBy: trackByProjectTitle">
     <div class="row">
       <h3>{{ p.title }}</h3>
       <span class="time">{{ p.timeframe }}</span>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 type Project = {
@@ -16,10 +16,11 @@ type Project = {
   standalone: true,
   imports: [CommonModule],
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+  styleUrl: './projects.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProjectsComponent {
-  projects: Project[] = [
+  readonly projects: Project[] = [
     {
       title: 'Developer WorkFlow Discipline',
       timeframe: 'Jan 2023 – Apr 2023',
@@ -55,4 +56,8 @@ export class ProjectsComponent {
       live: 'https://rishikeshmanohar.github.io/My-Portfolio/'
     }
   ];
+
+  trackByProjectTitle(_index: number, project: Project): string {
+    return project.title;
+  }
 }

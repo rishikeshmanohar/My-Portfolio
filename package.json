@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:gh-pages": "ng build --configuration production --base-href /My-Portfolio/ --output-path docs",
+    "deploy:gh-pages": "npm run build:gh-pages && node scripts/prepare-gh-pages.mjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
