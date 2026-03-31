@@ -29,13 +29,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build docs for GitHub Pages
-        run: npm run build -- --configuration production --base-href /My-Portfolio/ --output-path docs
-
-      - name: Prepare SPA fallback
-        run: |
-          cp docs/index.html docs/404.html
-          touch docs/.nojekyll
+      - name: Build and prepare docs for GitHub Pages
+        run: npm run deploy:gh-pages
 
       - name: Commit and push docs
         run: |
